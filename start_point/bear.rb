@@ -20,12 +20,12 @@ class Bear
       return "The fish is in another castle"
     end
   end
+
+  def hunt_for_many_fish(river,amount)
+    amount.times { hunt_for_fish(river) }
+  end
+
+  def digest()
+    @stomach.clear()
+  end
 end
-
-
-# - A bear should be able to eat a fish from the river. Bear will have a
-# function
-#  ```hunt_for_fish( River )``` which takes a River pbject as an argument.
-#  Inside it will check if there is any fish in the river, take the first
-#  fish and bear will eat that fish
-# - A river should lose a fish when a bear eats a fish
