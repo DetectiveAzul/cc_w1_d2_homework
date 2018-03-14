@@ -20,7 +20,7 @@ class BearTest < Minitest::Test
   def test_eat_a_fish()
     @yogui.eat_a_fish(@guadiana.many_fish[0])
     @yogui.eat_a_fish(@guadiana.many_fish[1])
-    assert_equal(2, @yogui.stomach.length)
+    assert_equal(0, @yogui.stomach.length)
   end
 
   def test_is_starving__returns_true()
@@ -28,8 +28,8 @@ class BearTest < Minitest::Test
   end
 
   def test_is_starving__returns_false()
-    @yogui.eat_a_fish(@fish1)
-    @yogui.eat_a_fish(@fish2)
+    @yogui.eat_a_fish(@guadalquivir.many_fish[0])
+    @yogui.eat_a_fish(@guadalquivir.many_fish[1])
     assert_equal(false,@yogui.is_starving?())
   end
 
