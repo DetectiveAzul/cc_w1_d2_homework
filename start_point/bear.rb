@@ -14,11 +14,7 @@ class Bear
   end
 
   def hunt_for_fish(river)
-    if river.fish_count > 0
-      eat_a_fish(river.fish_eaten)
-    else
-      return "The fish is in another castle"
-    end
+    eat_a_fish(river.fish_eaten) if river.fish_count > 0    
   end
 
   def hunt_for_many_fish(river,amount)

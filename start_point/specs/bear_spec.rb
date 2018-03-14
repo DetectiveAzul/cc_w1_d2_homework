@@ -41,7 +41,8 @@ class BearTest < Minitest::Test
   end
 
   def test_hunt_for_fish__failure()
-    assert_equal("The fish is in another castle",@yogui.hunt_for_fish(@guadiana))
+    @yogui.hunt_for_fish(@guadiana)
+    assert_equal(true,@yogui.is_starving?())
   end
 
   def test_hunt_for_many_fish__enough_fishes
